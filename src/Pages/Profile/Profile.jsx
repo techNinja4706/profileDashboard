@@ -15,9 +15,6 @@ const Profile = () => {
   // const users = state.allUsers;
   // console.log(users);
 
-
-
-
   return (
     <div className={styles.row}>
       jj

@@ -15,20 +15,20 @@ const ChatBox = (props) => {
   // const onDecreaseHeight = () => {
   //     setChatBoxHeight(false)
   // }
-//   const renderUsers = () => {
-//     const elements = users.map((user) => {
-//       return (
-//         <li key={user.id} className={styles.user_list}>
-//           <div className={styles.user_list_container}>
-//             <img src={user.profilepicture} className={styles.img} />
-//             <p>{user.name}</p>
-//           </div>
-//           <span></span>
-//         </li>
-//       );
-//     });
-//     return elements;
-//   };
+  //   const renderUsers = () => {
+  //     const elements = users.map((user) => {
+  //       return (
+  //         <li key={user.id} className={styles.user_list}>
+  //           <div className={styles.user_list_container}>
+  //             <img src={user.profilepicture} className={styles.img} />
+  //             <p>{user.name}</p>
+  //           </div>
+  //           <span></span>
+  //         </li>
+  //       );
+  //     });
+  //     return elements;
+  //   };
 
   return (
     <div className={styles.chat}>

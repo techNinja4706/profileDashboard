@@ -1,9 +1,7 @@
 import Template from "../../components/Template/Template";
 
 const Post = () => {
-    return (
-        <Template />
-    )
-}
+  return <Template />;
+};
 
 export default Post;

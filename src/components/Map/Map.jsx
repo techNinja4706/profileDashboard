@@ -4,7 +4,6 @@ import { Loader } from "@googlemaps/js-api-loader";
 const GoogleMap = (props) => {
   console.log(props);
   const mapContainerRef = useRef(null);
-  
 
   useEffect(() => {
     const loader = new Loader({

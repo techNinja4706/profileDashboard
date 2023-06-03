@@ -1,9 +1,7 @@
 import Template from "../../components/Template/Template";
 
 const Gallery = () => {
-    return (
-        <Template />
-    )
-}
+  return <Template />;
+};
 
 export default Gallery;

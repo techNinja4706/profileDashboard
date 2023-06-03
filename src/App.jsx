@@ -12,18 +12,21 @@ import UserList from "./Context/UserList";
 function App() {
   const router = createBrowserRouter([
     // { path: "test", element: <Text />},
-    { index: true, element: <Login />},
-    {path: "/profile/:id", element: <Layout />, children:[
-      
-      { index: true, element: <Dashboard /> },
-      { path: "post", element: <Post /> },
-      { path: "gallery", element: <Gallery/> },
-      { path: "todo", element: <Todo /> },
-    ]} 
+    { index: true, element: <Login /> },
+    {
+      path: "/profile/:id",
+      element: <Layout />,
+      children: [
+        { index: true, element: <Dashboard /> },
+        { path: "post", element: <Post /> },
+        { path: "gallery", element: <Gallery /> },
+        { path: "todo", element: <Todo /> },
+      ],
+    },
   ]);
   return (
     <UserList>
-        <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </UserList>
   );
 }
