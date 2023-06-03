@@ -1,38 +1,33 @@
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { Users } from "../../Context/UserList";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [users, setUsers] = useState([]);
+  const {users} = useContext(Users);
+  console.log("state", users);
+  // const [users, setUsers] = useState([]);
+
 
   const onNavigate = (id) => {
-    const user = users.filter((user) => user.id === id);
-
-    navigate("/profile-dashboard", {
-      state: {
-        selectedUser: user,
-        allUsers: users,
-      },
-    });
+    // selectUser(id);
+    navigate(`/profile/${id}`)
   };
 
-  const fetchUsers = async () => {
-    const response = await axios.get("https://panorbit.in/api/users.json");
-    console.log("response", response.data.users);
-    setUsers(response.data.users);
-  };
+  // const fetchUsers = async () => {
+  //   const response = await axios.get("https://panorbit.in/api/users.json");
+  //   console.log("response", response.data.users);
+  //   setUsers(response.data.users);
+  // };
 
   const renderUserName = () => {
-    const elements = users.map((user) => {
+    const elements = users !== undefined ? users.map((user) => {
       return (
         <li
           className={styles.list}
           key={user.id}
-          onClick={() => {
-            onNavigate(user.id);
-          }}
+          onClick={() => {onNavigate(user.id)}}
         >
           <img
             src={user.profilepicture}
@@ -41,14 +36,14 @@ const Login = () => {
           <p className={styles.user_name}>{user.name}</p>
         </li>
       );
-    });
+    }) : null;
     console.log(elements);
     return elements;
   };
 
-  useEffect(() => {
-    fetchUsers();
-  }, []);
+  // useEffect(() => {
+  //   fetchUsers();
+  // }, []);
   return (
     <div className={styles.layout}>
       <div className={styles.login}>

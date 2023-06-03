@@ -1,12 +1,10 @@
-import { useLocation } from "react-router-dom";
 import { BsCircleFill } from "react-icons/bs";
 import { BsChatRight } from "react-icons/bs";
 import { IoIosArrowUp } from "react-icons/io";
 import styles from "./ChatBox.module.css";
 
 const ChatBox = (props) => {
-  const { state } = useLocation();
-  const users = state.allUsers;
+  const users = JSON.parse(localStorage.getItem("users"));
   const addHeight = `${styles.chatbox}  ${styles.addHeight}`;
   const decreaseHeight = `${styles.header} ${styles.decrease_height}`;
 
