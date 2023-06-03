@@ -1,0 +1,99 @@
+
+.layout {
+  /* border: 10px solid black; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgb(117, 86, 191); */
+}
+
+.login {
+  /* border: 2px solid black; */
+  height: 70%;
+  width: 38%;
+  border-radius: 20px;
+}
+
+.login_header {
+  height: 10%;
+  /* border: 1px solid black; */
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: rgb(241, 241, 241);
+}
+
+.login_header p {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(74, 71, 71);
+}
+
+.container {
+  height: 90%;
+  border: 1px solid rgb(241, 241, 241);
+}
+.container {
+  height: 90%;
+  border-top: none;
+}
+
+.users_list_container {
+  height: 100%;
+  padding: 10px;
+  /* border: 19px solid violet; */
+  overflow-y: auto;
+}
+
+/* 
+::-webkit-scrollbar {
+  width: 100px;
+}  */
+
+
+/* width */
+.users_list_container::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.users_list_container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+
+}
+
+/* Handle */
+.users_list_container::-webkit-scrollbar-thumb {
+  background-color: rgb(241, 241, 241);
+}
+/* Handle on hover */
+.users_list_container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.list {
+  list-style-type: none;
+  height: 50px;
+  display: flex;
+  border-bottom: 1px solid rgb(241, 241, 241);
+  align-items: center;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.list p {
+  margin-left: 10px;
+}
+
+.user_profile_picture {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
